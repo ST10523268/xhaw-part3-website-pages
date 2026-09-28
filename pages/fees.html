@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Your Fees - Next Level Arena</title>
+</head>
+<body>
+    <header>
+        <div class="logo">NEXT LEVEL ARENA [LOGO]</div>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="courses.html">Gaming Packages</a>
+            <a href="fees.html">Calculate Fees</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Calculate Your Fees</h1>
+        <p>Build an estimate in South African Rand before you book.</p>
+
+        <div class="calculator-container">
+            <form id="feeForm">
+                <h2>1. Contact Information</h2>
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" placeholder="Enter your full name">
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="+27 (0) 82 123 4567">
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="e.g. name@domain.co.za">
+
+                <h2>2. Select Packages</h2>
+                <label><input type="checkbox" name="package" value="1500"> Ultimate Gamer Pass - R1 500</label><br>
+                <label><input type="checkbox" name="package" value="1500"> VIP Gaming Experience - R1 500</label><br>
+                <label><input type="checkbox" name="package" value="1500"> Esports Training Package - R1 500</label><br>
+                <label><input type="checkbox" name="package" value="1500"> Birthday Party Package - R1 500</label><br>
+
+                <h2>3. Select Experiences</h2>
+                <label><input type="checkbox" name="experience" value="750"> Virtual Reality Experience - R750</label><br>
+                <label><input type="checkbox" name="experience" value="750"> Racing Simulator Challenge - R750</label><br>
+                <label><input type="checkbox" name="experience" value="750"> Escape Room Challenge - R750</label><br>
+
+                <h2>4. Guest Count & Add-ons</h2>
+                <label for="guests">Guest Count:</label>
+                <input type="number" id="guests" min="1" value="1"><br><br>
+
+                <label><input type="checkbox" name="addon" value="180"> Snack Platter (+R180)</label><br>
+                <label><input type="checkbox" name="addon" value="300"> 30-min Coaching Boost (+R300)</label><br>
+                <label><input type="checkbox" name="addon" value="250"> Arena Highlight Reel (+R250)</label><br>
+
+                <button type="button" id="calcBtn">Calculate Total</button>
+            </form>
+
+            <div class="summary-box">
+                <h2>Quotation Summary</h2>
+                <p>Subtotal: <span id="subtotal">R0.00</span></p>
+                <p>VAT (15%): <span id="vat">R0.00</span></p>
+                <h3>Total Amount: <span id="total">R0.00</span></h3>
+                <button type="submit">Request Booking</button>
+                <p><small>*Estimates are subject to venue availability and confirmation.</small></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Next Level Gaming & Esports Arena. All rights reserved.</p>
+    </footer>
+</body>
+</html>
