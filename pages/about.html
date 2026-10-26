@@ -3,360 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Next Level Arena</title>
+    <title>About Us | Next Level Gaming & Esports Arena</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+
+    <!-- Header Navigation Section -->
     <header>
-        <div class="logo">NEXT LEVEL ARENA [LOGO]</div>
+        <div class="logo">
+            <!-- Logo Image Placeholder & Branding -->
+            <img src="../images/logo-placeholder.png" alt="Next Level Gaming & Esports Arena Logo" width="180" height="60">
+        </div>
         <nav>
-            <a href="../index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="courses.html">Gaming Packages</a>
-    <title>About | Next Level Gaming & Esports Arena</title>
-    <link rel="stylesheet" href="../assets/style/main.css">
-
-    <style>
-        :root {
-            --purple: #8A2BE2;
-            --cyan: #00E5FF;
-            --orange: #FF8C42;
-            --dark: #08000F;
-            --dark-blue: #00131F;
-        }
-
-        body {
-            margin: 0;
-            min-height: 100vh;
-            color: white;
-            background:
-                radial-gradient(circle at 10% 20%, rgba(138, 43, 226, 0.25), transparent 30%),
-                radial-gradient(circle at 90% 30%, rgba(0, 229, 255, 0.20), transparent 30%),
-                linear-gradient(135deg, var(--dark), #12001F, var(--dark-blue));
-            font-family: Arial, sans-serif;
-        }
-
-        .navbar {
-            background: rgba(8, 0, 15, 0.92);
-            border-bottom: 1px solid rgba(138, 43, 226, 0.5);
-        }
-
-        .logo {
-            color: white;
-            background: linear-gradient(135deg, var(--orange), var(--cyan));
-        }
-
-        nav a {
-            color: white;
-        }
-
-        nav a:hover,
-        nav a.active {
-            color: var(--cyan);
-        }
-
-        .section-label {
-            color: var(--cyan);
-            letter-spacing: 2px;
-        }
-
-        h1 span,
-        h2 span {
-            background: linear-gradient(90deg, var(--purple), var(--cyan), var(--orange));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .about-card,
-        .goal-card {
-            background: rgba(20, 5, 35, 0.75);
-            border: 1px solid rgba(138, 43, 226, 0.45);
-            box-shadow: 0 0 25px rgba(138, 43, 226, 0.12);
-        }
-
-        .about-card:hover,
-        .goal-card:hover {
-            border-color: var(--cyan);
-            box-shadow: 0 0 25px rgba(0, 229, 255, 0.2);
-        }
-
-        .icon,
-        .mission-points strong,
-        .goal-card span {
-            color: var(--orange);
-        }
-
-        .mission-section {
-            background: rgba(0, 19, 31, 0.7);
-            border-top: 1px solid rgba(0, 229, 255, 0.25);
-            border-bottom: 1px solid rgba(0, 229, 255, 0.25);
-        }
-
-        .about-cta {
-            background:
-                radial-gradient(circle at center, rgba(138, 43, 226, 0.3), transparent 60%),
-                linear-gradient(135deg, #08000F, #00131F);
-        }
-
-        .btn.primary {
-            background: var(--purple);
-            color: white;
-        }
-
-        .btn.primary:hover {
-            background: var(--cyan);
-            color: #08000F;
-        }
-
-        .btn.secondary {
-            border: 1px solid var(--orange);
-            color: var(--orange);
-        }
-
-        .btn.secondary:hover {
-            background: var(--orange);
-            color: #08000F;
-        }
-
-        footer {
-            background: #050008;
-            border-top: 1px solid rgba(138, 43, 226, 0.4);
-            color: #aaa;
-        }
-    </style>
-</head>
-
-<body>
-
-    <header class="navbar">
-        <div class="logo">NL</div>
-
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="about.html" class="active">About</a>
-            <a href="courses.html">Packages</a>
-            <a href="experiences.html">Experiences</a>
-            <a href="details.html">Details</a>
-            <a href="fees.html">Calculate Fees</a>
-            <a href="contact.html">Contact</a>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="packages.html">Gaming Packages</a></li>
+                <li><a href="experiences.html">Individual Experiences</a></li>
+                <li><a href="calculate-fees.html">Calculate Fees</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
-        <section class="about-hero">
-            <h1>Built for the Next Generation</h1>
-            <p>To answer South Africa's growing need for an accessible, world-class esports venue—where players can compete, connect, and level up together.</p>
+        <!-- Page Hero / Title -->
+        <section class="page-header">
+            <h1>About Us</h1>
+            <p>Discover the story, vision, and mission behind Johannesburg's premier high-tech gaming and esports venue.</p>
         </section>
 
-        <section class="about-grid">
-            <article>
-                <h2>History & Mission</h2>
-                <p>Founded to bring high-performance gaming hardware and competitive infrastructure to local gamers.</p>
-            </article>
-
-            <article>
-                <h2>Arena Essentials</h2>
-                <ul>
-                    <li><strong>High-Speed Fiber:</strong> Low-latency business-grade connectivity.</li>
-                    <li><strong>Pro Rigs:</strong> Tournament-ready PCs with high refresh displays.</li>
-                    <li><strong>Refreshment Lounge:</strong> Refuel between sessions with snacks and drinks.</li>
-                    <li><strong>Tournament Stage:</strong> Broadcast-ready arena stage for pro-level events.</li>
-                </ul>
-            </article>
-
-            <article>
-                <h2>Who It's For</h2>
-                <div>
-                    <h3>Teen Gamers (13-17)</h3>
-                    <p>Safe after-school play and social competition.</p>
-                </div>
-                <div>
-                    <h3>Young Adults (18-25)</h3>
-                    <p>Premium rigs, leagues, and creator-ready spaces.</p>
-                </div>
-                <div>
-                    <h3>Teams & Groups (4-20)</h3>
-                    <p>Training, parties, and private arena events.</p>
-                </div>
-            </article>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Next Level Gaming & Esports Arena. All rights reserved.</p>
-    </footer>
-
-        <section class="about-hero">
-            <p class="section-label">ABOUT NEXT LEVEL</p>
-
-            <h1>
-                BUILT FOR THE<br>
-                <span>NEXT LEVEL.</span>
-            </h1>
-
-            <p>
-                Next Level Gaming & Esports Arena is a modern gaming and
-                entertainment destination in Johannesburg created for gamers,
-                competitors, friends and communities.
-            </p>
-        </section>
-
+        <!-- History Section -->
         <section class="about-section">
-
-            <div class="about-card">
-                <div class="icon">01</div>
-
-                <h2>OUR HISTORY</h2>
-
+            <div class="about-text">
+                <h2>Our History</h2>
                 <p>
-                    Next Level Gaming & Esports Arena was created to provide
-                    gamers with a dedicated space to play, compete and connect.
-                    The arena brings together competitive esports, gaming
-                    experiences and entertainment in one modern environment.
+                    Established in 2023 in Johannesburg, Next Level Gaming & Esports Arena is an initiative founded by Jason Naidoo, an avid gamer. He noticed that many local gamers lacked access to high-performance gaming equipment and organized competitive events. To address this, he established a modern entertainment venue where gamers of all ages could enjoy cutting-edge technology, compete in esports tournaments, and socialize with friends. Over the years, we have expanded to become a core hub for school leagues, professional tournament hosting, and community gaming events.
                 </p>
             </div>
-
-            <div class="about-card">
-                <div class="icon">02</div>
-
-                <h2>OUR VISION</h2>
-
-                <p>
-                    To become a leading gaming and esports destination in
-                    Johannesburg where players of all experience levels can
-                    enjoy innovative technology, competitive gaming and
-                    memorable experiences.
-                </p>
+            <div class="about-image">
+                <img src="../images/history-placeholder.jpg" alt="Next Level Arena History and Origins" width="450" height="300">
             </div>
-
         </section>
 
-        <section class="mission-section">
-
-            <div class="mission-content">
-
-                <p class="section-label">WHAT DRIVES US</p>
-
-                <h2>OUR <span>MISSION</span></h2>
-
+        <!-- Vision Section -->
+        <section class="about-section reverse">
+            <div class="about-image">
+                <img src="../images/vision-placeholder.jpg" alt="Next Level Arena Vision" width="450" height="300">
+            </div>
+            <div class="about-text">
+                <h2>Our Vision</h2>
                 <p>
-                    Our mission is to create an exciting, welcoming and
-                    accessible gaming environment where people can develop
-                    their skills, compete with others and enjoy gaming
-                    together.
+                    To cultivate and lead South Africa's premier gaming culture, bridging structural gaps in local esports development while fostering safe, accessible, and high-performance gaming environments for families and youth alike.
                 </p>
-
             </div>
-
-            <div class="mission-points">
-
-                <div>
-                    <strong>01</strong>
-                    <h3>COMMUNITY</h3>
-                    <p>
-                        Connect gamers and create a welcoming gaming community.
-                    </p>
-                </div>
-
-                <div>
-                    <strong>02</strong>
-                    <h3>COMPETITION</h3>
-                    <p>
-                        Support players through esports and competitive events.
-                    </p>
-                </div>
-
-                <div>
-                    <strong>03</strong>
-                    <h3>EXPERIENCE</h3>
-                    <p>
-                        Deliver memorable gaming and entertainment experiences.
-                    </p>
-                </div>
-
-            </div>
-
         </section>
 
+        <!-- Mission Section -->
+        <section class="about-section">
+            <div class="about-text">
+                <h2>Our Mission</h2>
+                <p>
+                    We deliver state-of-the-art interactive gaming infrastructure combined with structured, community-centered experiences. We design customized packages tailored for parties, institutions, and team-building scenarios to guarantee unforgettable memories.
+                </p>
+            </div>
+            <div class="about-image">
+                <img src="../images/mission-placeholder.jpg" alt="Next Level Arena Mission" width="450" height="300">
+            </div>
+        </section>
+
+        <!-- Goals Section -->
         <section class="goals-section">
-
-            <p class="section-label">OUR DIRECTION</p>
-
-            <h2>OUR <span>GOALS</span></h2>
-
-            <div class="goals-grid">
-
-                <div class="goal-card">
-                    <span>01</span>
-                    <h3>GROW ESPORTS</h3>
-
-                    <p>
-                        Encourage competitive gaming and provide opportunities
-                        for players to develop their skills.
-                    </p>
-                </div>
-
-                <div class="goal-card">
-                    <span>02</span>
-                    <h3>BUILD COMMUNITY</h3>
-
-                    <p>
-                        Bring gamers together through events, tournaments and
-                        shared gaming experiences.
-                    </p>
-                </div>
-
-                <div class="goal-card">
-                    <span>03</span>
-                    <h3>INNOVATE</h3>
-
-                    <p>
-                        Provide modern gaming technology and experiences that
-                        keep visitors coming back.
-                    </p>
-                </div>
-
-                <div class="goal-card">
-                    <span>04</span>
-                    <h3>CREATE MEMORIES</h3>
-
-                    <p>
-                        Offer exciting experiences for individuals, groups,
-                        birthdays and private events.
-                    </p>
-                </div>
-
-            </div>
-
+            <h2>Our Goals</h2>
+            <ol class="goals-list">
+                <li>Establish professional esports training courses for regional high schools and youth clubs.</li>
+                <li>Provide accessible premium hardware options enabling low-barrier local talent incubation.</li>
+                <li>Build strategic B2B pipelines to host world-class collaborative corporate team-building outings.</li>
+                <li>Maintain a robust calendar of community-centric competitive weekly events in Gauteng.</li>
+            </ol>
         </section>
-
-        <section class="about-cta">
-
-            <h2>READY TO <span>LEVEL UP?</span></h2>
-
-            <p>
-                Choose your experience and start your next gaming session.
-            </p>
-
-            <div class="cta-buttons">
-
-                <a href="courses.html" class="btn primary">
-                    VIEW PACKAGES
-                </a>
-
-                <a href="fees.html" class="btn secondary">
-                    CALCULATE FEES
-                </a>
-
-            </div>
-
-        </section>
-
     </main>
 
+    <!-- Footer Section -->
     <footer>
-        <p>
-            © 2026 Next Level Gaming & Esports Arena. All rights reserved.
-        </p>
+        <div class="footer-container">
+            <div class="footer-col">
+                <img src="../images/logo-footer-placeholder.png" alt="Next Level Arena Footer Logo" width="150" height="50">
+                <p>Johannesburg's premier high-tech gaming and esports venue.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <p>Location: Johannesburg, South Africa</p>
+                <p>Email: info@nextlevelarena.co.za</p>
+                <p>Phone: +27 (0) 11 123 4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Next Level Gaming & Esports Arena. All Rights Reserved.</p>
+        </div>
     </footer>
 
 </body>
