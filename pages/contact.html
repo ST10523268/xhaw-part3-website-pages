@@ -1,24 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="../css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Next Level Arena</title>
+    <script src="../js/main.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="logo">NEXT LEVEL ARENA [LOGO]</div>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="courses.html">Gaming Packages</a>
-            <a href="fees.html">Calculate Fees</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+    <header class="site-header">
+        <div class="topbar">
+            <div class="logo">
+                <span class="logo-mark">NL</span>
+                <span class="logo-text">NEXT LEVEL ARENA</span>
+            </div>
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="../index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="courses.html">Gaming Packages &amp; Experiences</a>
+                <a href="fees.html">Calculate Fees</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <h1>Contact Us</h1>
+    <main class="page-shell">
+        <section class="page-header">
+            <h1>Contact Us</h1>
+            <p>Book your next session, plan a custom package, or ask our team anything about tournaments and private events.</p>
+        </section>
+
         <div class="contact-grid">
             <section class="venue-info">
                 <h2>Our Venue Details</h2>
@@ -27,51 +38,103 @@
                 <p><strong>Address:</strong> 42 Gaming Boulevard, Sandton, Johannesburg</p>
                 <p><strong>Operating Hours:</strong> Mon - Sun: 09:00 AM - 22:00 PM</p>
 
-                <h3>CONNECT WITH US ON SOCIALS</h3>
-                <button>Facebook</button>
-                <button>Instagram</button>
-                <button>Twitter</button>
-                <button>YouTube</button>
+                <h2>Connect With Us</h2>
+                <div class="social-links">
+                    <a class="social-button" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    <a class="social-button" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a class="social-button" href="https://x.com/" target="_blank" rel="noopener noreferrer">X</a>
+                    <a class="social-button" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a>
+                </div>
             </section>
 
             <section class="map-placeholder">
-                <div style="border: 1px solid #ccc; width: 100%; height: 300px; text-align: center; line-height: 300px;">
-                    [MAP PLACEHOLDER - SANDTON, JOHANNESBURG]
-                </div>
+                <iframe
+                    class="map-frame"
+                    src="https://www.google.com/maps?q=Sandton%2C%20Johannesburg&z=13&output=embed"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Sandton map showing the Next Level Gaming location">
+                </iframe>
             </section>
         </div>
 
         <section class="contact-form-section">
             <h2>Send Us a Message</h2>
-            <form>
-                <label for="c-name">Name</label>
-                <input type="text" id="c-name" placeholder="Your Name">
+            <form id="contactForm" novalidate>
+                <div>
+                    <label for="c-name">Name</label>
+                    <input type="text" id="c-name" placeholder="Your Name" aria-describedby="c-name-error">
+                    <div class="field-error" data-error-for="c-name" id="c-name-error" aria-live="polite"></div>
+                </div>
 
-                <label for="c-email">Email</label>
-                <input type="email" id="c-email" placeholder="Your Email Address">
+                <div>
+                    <label for="c-email">Email</label>
+                    <input type="email" id="c-email" placeholder="Your Email Address" aria-describedby="c-email-error">
+                    <div class="field-error" data-error-for="c-email" id="c-email-error" aria-live="polite"></div>
+                </div>
 
-                <label for="c-package">Selected Package/Experience</label>
-                <select id="c-package">
-                    <option value="">Choose an option...</option>
-                    <option value="gamer_pass">Ultimate Gamer Pass</option>
-                    <option value="vip">VIP Gaming Experience</option>
-                    <option value="esports">Esports Training Package</option>
-                    <option value="birthday">Birthday Party Package</option>
-                    <option value="vr">Virtual Reality Experience</option>
-                    <option value="racing">Racing Simulator Challenge</option>
-                    <option value="escape">Escape Room Challenge</option>
-                </select>
+                <div>
+                    <label for="c-phone">Phone Number</label>
+                    <input type="tel" id="c-phone" placeholder="Your phone number" minlength="10" aria-describedby="c-phone-error">
+                    <div class="field-error" data-error-for="c-phone" id="c-phone-error" aria-live="polite"></div>
+                </div>
 
-                <label for="c-message">Message</label>
-                <textarea id="c-message" rows="5" placeholder="Type your query or custom requirements here..."></textarea>
+                <div>
+                    <label for="c-package">Selected Package/Experience</label>
+                    <select id="c-package" aria-describedby="c-package-error">
+                        <option value="">Choose an option...</option>
+                        <option value="gamer_pass">Ultimate Gamer Pass</option>
+                        <option value="vip">VIP Gaming Experience</option>
+                        <option value="esports">Esports Training Package</option>
+                        <option value="birthday">Birthday Party Package</option>
+                        <option value="vr">Virtual Reality Experience</option>
+                        <option value="racing">Racing Simulator Challenge</option>
+                        <option value="escape">Escape Room Challenge</option>
+                    </select>
+                    <div class="field-error" data-error-for="c-package" id="c-package-error" aria-live="polite"></div>
+                </div>
+
+                <div>
+                    <label for="c-message">Message</label>
+                    <textarea id="c-message" rows="5" placeholder="Type your query or custom requirements here..." aria-describedby="c-message-error"></textarea>
+                    <div class="field-error" data-error-for="c-message" id="c-message-error" aria-live="polite"></div>
+                </div>
 
                 <button type="submit">Send Message</button>
+                <div id="contactSuccess" class="form-success" role="status" aria-live="polite"></div>
             </form>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Next Level Gaming & Esports Arena. All rights reserved.</p>
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="logo">
+                    <span class="logo-mark">NL</span>
+                    <span class="logo-text">NEXT LEVEL ARENA</span>
+                </div>
+                <p>Johannesburg's premier gaming and esports venue.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Details</h4>
+                <p>Phone: +27 03 11 123 4567</p>
+                <p>Email: info@nextlevelarena.co.za</p>
+                <p>Address: 42 Gaming Boulevard, Sandton</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="courses.html">Gaming Packages &amp; Experiences</a></li>
+                    <li><a href="fees.html">Calculate Fees</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Next Level Gaming & Esports Arena. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
