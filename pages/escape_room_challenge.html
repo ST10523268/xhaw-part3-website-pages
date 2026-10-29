@@ -5,25 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escape Room Challenge | Next Level Gaming & Esports Arena</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/main.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="../images/logo-placeholder.png" alt="Next Level Logo" width="180" height="60">
+        <header class="site-header">
+        <div class="topbar">
+            <div class="logo">
+                <span class="logo-mark">NL</span>
+                <span class="logo-text">NEXT LEVEL ARENA</span>
+            </div>
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="../index.html" class="active">Home</a>
+                <a href="about.html" class="">About Us</a>
+                <a href="courses.html" class="">Gaming Packages &amp; Experiences</a>
+                <a href="fees.html" class="">Calculate Fees</a>
+                <a href="contact.html" class="">Contact</a>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="courses.html">Gaming Packages</a></li>
-                <li><a href="experiences.html" class="active">Individual Experiences</a></li>
-                <li><a href="calculate-fees.html">Calculate Fees</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <main>
+    <main class="page-shell">
         <div class="detail-box">
             <p style="color: var(--neon-cyan); font-weight: bold; font-size: 0.85rem; letter-spacing: 1px; margin: 0;">TEAMWORK EXPERIENCE</p>
             <h1 style="color: var(--text-white); margin-top: 0.4rem; text-transform: uppercase;">Escape Room Challenge</h1>
@@ -38,18 +39,21 @@
             </ul>
 
             <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem; font-style: italic;">Sessions are subject to arena availability. Advance booking is recommended.</p>
-            <a href="calculate-fees.html" class="btn-cta" style="display: inline-block; text-align: center; width: 100%; padding: 0.8rem;">BOOK ESCAPE ROOM</a>
+            <a href="fees.html" class="btn-cta" style="display: inline-block; text-align: center; width: 100%; padding: 0.8rem;">BOOK ESCAPE ROOM</a>
         </div>
     </main>
 
-    <footer>
+    <footer class="site-footer">
         <div class="footer-container">
             <div class="footer-col">
-                <img src="../images/logo-footer-placeholder.png" alt="Footer Logo" width="150" height="50">
+                <div class="logo">
+                    <span class="logo-mark">NL</span>
+                    <span class="logo-text">NEXT LEVEL ARENA</span>
+                </div>
                 <p>Johannesburg's premier high-tech gaming and esports venue.</p>
             </div>
             <div class="footer-col">
-                <h4>Contact Info</h4>
+                <h4>Contact Details</h4>
                 <p>Location: Johannesburg, South Africa</p>
                 <p>Email: info@nextlevelarena.co.za</p>
                 <p>Phone: +27 (0) 11 123 4567</p>
