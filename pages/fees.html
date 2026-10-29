@@ -1,73 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculate Your Fees - Next Level Arena</title>
-</head>
-<body>
-    <header>
-        <div class="logo">NEXT LEVEL ARENA [LOGO]</div>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="courses.html">Gaming Packages</a>
-            <a href="fees.html">Calculate Fees</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculate Your Fees - Next Level Gaming</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/main.js" defer></script>
+  </head>
+  <body>
+        <header class="site-header">
+        <div class="topbar">
+            <div class="logo">
+                <span class="logo-mark">NL</span>
+                <span class="logo-text">NEXT LEVEL ARENA</span>
+            </div>
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="../index.html" class="">Home</a>
+                <a href="about.html" class="">About Us</a>
+                <a href="courses.html" class="">Gaming Packages &amp; Experiences</a>
+                <a href="fees.html" class="active">Calculate Fees</a>
+                <a href="contact.html" class="">Contact</a>
+            </nav>
+        </div>
     </header>
 
-    <main>
+    <main class="page-shell">
+      <section class="hero-panel">
+        <p style="color: var(--cyan); font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 0.5rem;">Instant Quote</p>
         <h1>Calculate Your Fees</h1>
-        <p>Build an estimate in South African Rand before you book.</p>
+        <p>Build an estimate in South African Rand before you book your next gaming session.</p>
+      </section>
 
-        <div class="calculator-container">
-            <form id="feeForm">
-                <h2>1. Contact Information</h2>
-                <label for="fullName">Full Name</label>
-                <input type="text" id="fullName" placeholder="Enter your full name">
+      <div class="calculator-layout">
+        <form id="feeForm" class="form-panel">
+          <div class="section-heading">
+            <span>1</span>
+            <h2>Contact Information</h2>
+          </div>
 
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" placeholder="+27 (0) 82 123 4567">
-
-                <label for="email">Email Address</label>
-                <input type="email" id="email" placeholder="e.g. name@domain.co.za">
-
-                <h2>2. Select Packages</h2>
-                <label><input type="checkbox" name="package" value="1500"> Ultimate Gamer Pass - R1 500</label><br>
-                <label><input type="checkbox" name="package" value="1500"> VIP Gaming Experience - R1 500</label><br>
-                <label><input type="checkbox" name="package" value="1500"> Esports Training Package - R1 500</label><br>
-                <label><input type="checkbox" name="package" value="1500"> Birthday Party Package - R1 500</label><br>
-
-                <h2>3. Select Experiences</h2>
-                <label><input type="checkbox" name="experience" value="750"> Virtual Reality Experience - R750</label><br>
-                <label><input type="checkbox" name="experience" value="750"> Racing Simulator Challenge - R750</label><br>
-                <label><input type="checkbox" name="experience" value="750"> Escape Room Challenge - R750</label><br>
-
-                <h2>4. Guest Count & Add-ons</h2>
-                <label for="guests">Guest Count:</label>
-                <input type="number" id="guests" min="1" value="1"><br><br>
-
-                <label><input type="checkbox" name="addon" value="180"> Snack Platter (+R180)</label><br>
-                <label><input type="checkbox" name="addon" value="300"> 30-min Coaching Boost (+R300)</label><br>
-                <label><input type="checkbox" name="addon" value="250"> Arena Highlight Reel (+R250)</label><br>
-
-                <button type="button" id="calcBtn">Calculate Total</button>
-            </form>
-
-            <div class="summary-box">
-                <h2>Quotation Summary</h2>
-                <p>Subtotal: <output id="subtotal">R0.00</output></p>
-                <p>VAT (15%): <output id="vat">R0.00</output></p>
-                <h3>Total Amount: <output id="total">R0.00</output></h3>
-                <button type="submit">Request Booking</button>
-                <p><small>*Estimates are subject to venue availability and confirmation.</small></p>
+          <div class="field-grid">
+            <div class="field">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" placeholder="Enter your full name" aria-describedby="fullName-error" />
+              <div class="field-error" data-error-for="fullName" id="fullName-error" aria-live="polite"></div>
             </div>
-        </div>
+            <div class="field">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" placeholder="+27 (0) 82 123 4567" minlength="10" aria-describedby="phone-error" />
+              <div class="field-error" data-error-for="phone" id="phone-error" aria-live="polite"></div>
+            </div>
+          </div>
+
+          <div class="field" style="margin-top: 1rem;">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="e.g. name@domain.co.za" aria-describedby="email-error" />
+            <div class="field-error" data-error-for="email" id="email-error" aria-live="polite"></div>
+          </div>
+
+          <div class="section-heading">
+            <span>2</span>
+            <h2>Choose Packages</h2>
+          </div>
+
+          <div class="form-error" data-error-for="packageSelection" aria-live="polite"></div>
+
+          <div class="package-grid">
+            <label class="package-card">
+              <input type="checkbox" name="package" value="1500" />
+              <span class="package-card-content">
+                <strong>Ultimate Gamer Pass</strong>
+                <small>Membership + priority access</small>
+                <span class="price-tag">R1 500</span>
+              </span>
+            </label>
+
+            <label class="package-card">
+              <input type="checkbox" name="package" value="1500" />
+              <span class="package-card-content">
+                <strong>VIP Gaming Experience</strong>
+                <small>Private lounge access</small>
+                <span class="price-tag">R1 500</span>
+              </span>
+            </label>
+
+            <label class="package-card">
+              <input type="checkbox" name="package" value="1500" />
+              <span class="package-card-content">
+                <strong>Esports Training Package</strong>
+                <small>Coaching + performance labs</small>
+                <span class="price-tag">R1 500</span>
+              </span>
+            </label>
+
+            <label class="package-card">
+              <input type="checkbox" name="package" value="1500" />
+              <span class="package-card-content">
+                <strong>Birthday Party Package</strong>
+                <small>Private celebration booking</small>
+                <span class="price-tag">R1 500</span>
+              </span>
+            </label>
+          </div>
+
+          <div class="section-heading">
+            <span>3</span>
+            <h2>Choose Experiences</h2>
+          </div>
+
+          <div class="package-grid">
+            <label class="package-card">
+              <input type="checkbox" name="experience" value="750" />
+              <span class="package-card-content">
+                <strong>Virtual Reality Experience</strong>
+                <small>Immersive 360° challenge</small>
+                <span class="price-tag">R750</span>
+              </span>
+            </label>
+
+            <label class="package-card">
+              <input type="checkbox" name="experience" value="750" />
+              <span class="package-card-content">
+                <strong>Racing Simulator Challenge</strong>
+                <small>High-speed precision racing</small>
+                <span class="price-tag">R750</span>
+              </span>
+            </label>
+
+            <label class="package-card">
+              <input type="checkbox" name="experience" value="750" />
+              <span class="package-card-content">
+                <strong>Escape Room Challenge</strong>
+                <small>Strategy + team puzzle mode</small>
+                <span class="price-tag">R750</span>
+              </span>
+            </label>
+          </div>
+
+          <div class="section-heading">
+            <span>4</span>
+            <h2>Guest Count & Add-ons</h2>
+          </div>
+
+          <div class="field">
+            <label for="guests">Guest Count</label>
+            <input type="number" id="guests" min="1" value="1" aria-describedby="guests-error" />
+            <div class="field-error" data-error-for="guests" id="guests-error" aria-live="polite"></div>
+          </div>
+
+          <div class="package-grid" style="margin-top: 1rem;">
+            <label class="package-card">
+              <input type="checkbox" name="addon" value="180" />
+              <span class="package-card-content">
+                <strong>Snack Platter</strong>
+                <small>Refreshment bundle</small>
+                <span class="price-tag">+R180</span>
+              </span>
+            </label>
+
+            <label class="package-card">
+              <input type="checkbox" name="addon" value="300" />
+              <span class="package-card-content">
+                <strong>Coaching Boost</strong>
+                <small>30-minute tactical upgrade</small>
+                <span class="price-tag">+R300</span>
+              </span>
+            </label>
+
+            <label class="package-card">
+              <input type="checkbox" name="addon" value="250" />
+              <span class="package-card-content">
+                <strong>Arena Highlight Reel</strong>
+                <small>Capture your session</small>
+                <span class="price-tag">+R250</span>
+              </span>
+            </label>
+          </div>
+
+          <div class="quote-actions">
+            <button type="button" class="primary-btn" id="calcBtn">Calculate Total</button>
+            <button type="reset" class="secondary-btn">Reset Form</button>
+          </div>
+        </form>
+
+        <aside class="summary-panel">
+          <h2>Quotation Summary</h2>
+
+          <table class="fee-table" aria-label="Fee quotation summary table">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Type</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody id="summaryTableBody">
+              <tr>
+                <td colspan="3">No items selected yet.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="summary-total">
+            <p>Subtotal</p>
+            <strong id="subtotal">R0.00</strong>
+          </div>
+
+          <div class="summary-total">
+            <p>Discount</p>
+            <strong id="discount">-R0.00</strong>
+          </div>
+
+          <div class="summary-total">
+            <p>VAT (15%)</p>
+            <strong id="vat">R0.00</strong>
+          </div>
+
+          <div class="summary-total">
+            <p>Total Amount</p>
+            <strong id="total">R0.00</strong>
+          </div>
+
+          <button type="button" class="primary-btn" id="requestBookingBtn" style="margin-top: 1.25rem; width: 100%;">Request Booking</button>
+          <div id="bookingSuccess" class="form-success" role="status" aria-live="polite" style="margin-top: 1rem; width: 100%;"></div>
+          <p class="notice">*Estimates are subject to venue availability and confirmation.</p>
+        </aside>
+      </div>
     </main>
 
-    <footer>
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-col">
+          <div class="logo">
+            <span class="logo-mark">NL</span>
+            <span class="logo-text">NEXT LEVEL ARENA</span>
+          </div>
+          <p>Johannesburg's premier gaming and esports venue.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Details</h4>
+          <p>Phone: +27 11 555 0199</p>
+          <p>Email: info@nextlevelarena.co.za</p>
+          <p>Address: Sandton, Johannesburg</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="courses.html">Gaming Packages &amp; Experiences</a></li>
+            <li><a href="fees.html">Calculate Fees</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
         <p>&copy; 2026 Next Level Gaming & Esports Arena. All rights reserved.</p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
